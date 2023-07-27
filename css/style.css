@@ -1,0 +1,152 @@
+:root{
+    --clr-primary-500: hsl(257, 40%, 49%);
+    --clr-primary-300: hsl(300, 69%, 71%);
+
+    --ff-heading: 'Poppins', sans-serif;
+    --ff-body: 'Open Sans', sans-serif;
+}
+
+*,
+*::after
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background: url(../images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--clr-primary-500);
+}
+
+.logo{
+    width: 130px;
+    margin: 3rem;
+}
+.about h1{
+    font-family: var(--ff-heading);
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-top: 7rem;
+    margin-bottom: 0;
+    
+}
+
+.about p{
+    color: white;
+    font-family: var(--ff-body);
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.7;
+    padding: 1rem;
+    margin-top: 0;
+}
+
+.hero-image{
+    width: 100%;
+}
+
+.hero-image img{
+    width: inherit;
+}
+
+.grid{
+    margin: 3rem;
+    display: grid;
+}
+
+button{
+    display: flex;
+    margin: auto;
+    padding: 1.2rem 8rem;
+    border-radius: 100vh;
+    font-family: var(--ff-body);
+    font-size: 1.4rem;
+    border-style: none;
+color: var(--clr-primary-500);
+box-shadow: 0 0 1rem #333;
+transition: all 0.3s;
+cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--clr-primary-300);
+    color: white;
+}
+
+.socials{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+    gap: 2rem;
+    margin-top: 8rem;
+}
+
+
+.fa-brands{
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.fa-brands:hover{
+color: var(--clr-primary-300);
+}
+
+@media screen and (min-width: 768px) {
+    body{
+        background-image: url(../images/bg-desktop.svg);
+        background-size: cover;
+    }
+    
+    .grid{
+        grid-template-columns: 1fr 1fr;
+        margin: 5rem;
+    }
+    .logo{
+        margin: 5rem;
+        width: 170px;
+    }
+
+    .about h1{
+        text-align: left;
+        font-size: 4rem;
+        width: 50rem;
+    }
+
+    .about p{
+        text-align: left;
+        width: 60rem;
+        padding: 0;
+        margin-top: 2rem;
+    }
+
+    button{
+margin: 0;
+padding: 1.3rem 6rem;
+    }
+
+    .about{
+        margin-left: 5rem;
+    }
+
+    .hero-image{
+        min-width: 400px;
+    }
+
+    .socials{
+        justify-content: end;
+        margin-right: 5rem;
+    }
+}
+
+
